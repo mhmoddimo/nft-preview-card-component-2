@@ -1,0 +1,148 @@
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main: hsl(217, 54%, 11%);
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    font-family: 'Outfit', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Very-dark-blue-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    background-color: var(--Very-dark-blue-card);
+    width: 350px;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.main .imgs {
+    position: relative;
+}
+
+.main .imgs .overlay {
+    background-color: var(--Cyan);
+    opacity: 0.5;
+    width: 100%;
+    height: 99%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 8px;
+    visibility: hidden;
+    transition-duration: 0.1s;
+}
+
+.main .imgs:hover .img-view,
+.main .imgs:hover .overlay {
+    visibility: visible;
+}
+
+.main .img-view {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    transition-duration: 0.1s;
+}
+
+.main .img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+
+.main h1 {
+    color: var(--White);
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 15px;
+    transition-duration: 0.3s;
+}
+
+.main h1:hover {
+    color: var(--Cyan);
+}
+
+.main p {
+    color: var(--Soft-blue);
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.main .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.main .info .eth {
+    color: var(--Cyan);
+}
+
+.main .info .date {
+    color: var(--Soft-blue);
+}
+
+.main .info .date,
+.main .info .eth {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+}
+
+.main .info .date img,
+.main .info .eth img {
+    margin-right: 10px;
+}
+
+.main .sep {
+    width: 100%;
+    height: 1px;
+    background-color: var(--Very-dark-blue-line);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.main .footer {
+    display: flex;
+    align-items: center;
+}
+
+.main .footer .avatar {
+    width: 35px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.main .footer p {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+.main .footer p span {
+    color: var(--White);
+    transition-duration: 0.3s;
+}
+
+.main .footer p span:hover {
+    color: var(--Cyan);
+}
